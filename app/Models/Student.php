@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use App\Models\Profile;
 
 class Student extends Model
@@ -12,9 +13,8 @@ class Student extends Model
 
     protected $guarded = [];
 
-    public function profile()
+    public function profile(): HasOne
     {
-
-        return $this->belongsTo(Profile::class);
+        return $this->hasOne(Profile::class);
     }
 }

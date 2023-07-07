@@ -19,7 +19,6 @@ class ProfileFactory extends Factory
     {
         return [
             'student_id' => Student::factory(),
-            'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->unique()->e164PhoneNumber(),
         ];

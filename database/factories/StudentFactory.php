@@ -17,7 +17,7 @@ class StudentFactory extends Factory
     public function definition(): array
     {
         return [
-            'first_name' => fake()->firstName($gender = null | 'male' | 'female'),
+            'first_name' => fake()->firstName('male' | 'female'),
             'last_name' => fake()->lastName(),
         ];
     }

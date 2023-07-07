@@ -13,6 +13,7 @@ class ProfileSeeder extends Seeder
      */
     public function run(): void
     {
-        // $profiles = Profile::factory()->count(10)->make();
+        // 
+        $profiles = Profile::factory()->count(10)->make();
     }
 }
