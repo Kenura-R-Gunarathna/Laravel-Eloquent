@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Student;
 use App\Models\Profile;
+use App\Models\Comment;
 
 class StudentSeeder extends Seeder
 {
@@ -14,6 +15,6 @@ class StudentSeeder extends Seeder
      */
     public function run(): void
     {
-        $students = Student::factory()->count(20)->hasProfile(1)->create();
+        $students = Student::factory(20)->hasProfile(1)->create();
     }
 }
